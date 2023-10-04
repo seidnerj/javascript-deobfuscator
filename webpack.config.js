@@ -15,8 +15,12 @@ module.exports = {
         ]
     },
     output: {
-        filename: 'main.js',
+        filename: 'deobfuscator.js',
         path: path.resolve(__dirname, 'web'),
-        library: 'deobfuscator'
+        globalObject: 'this',
+        library: {
+          name: 'deobfuscator',
+          type: 'umd',
+        },        
     }
 };
